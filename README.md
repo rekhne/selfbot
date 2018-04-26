@@ -1,4 +1,4 @@
-#TeleGOLD
+#TeleGold
 
-T.ME/RekeneSecurity
+[@RekneSecurity](https://telegram.me/RekeneSecurity)
 
