@@ -1,4 +1,4 @@
--- #opened by @HEART_SEARCH
+-------- @RekhneSecurity
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -11,8 +11,8 @@ tdcli = dofile("tdcli.lua")
 utf8 = dofile('utf8.lua')
 db = dofile('database.lua')
 http.TIMEOUT = 10
-local bot_id = 545628723
-sudo_users = {545628723}
+local bot_id = 300162673
+sudo_users = {300162673}
 function is_sudo(msg)
   local var = false
   for v,user in pairs(sudo_users) do
@@ -251,9 +251,9 @@ else
   tdcli.editMessageText(chat_id, msg.id_, nil, '> *The Self Bot Already On !*', 1, 'md')
 end
 end
-if input:match("^سس$") or input:match("^a$") and is_sudo(msg) then
+if input:match("^ping$") or input:match("^Ping$") and is_sudo(msg) then
 redis:sadd("sgpsss:",chat_id)
-tdcli.editMessageText(chat_id, msg.id_, nil, '> ☼', 1, 'md')
+tdcli.editMessageText(chat_id, msg.id_, nil, '@RekhneSecurity', 1, 'md')
 end
 if input:match("^self off$") and is_sudo(msg) then
 if not redis:get("bot_on") then
@@ -683,7 +683,7 @@ elseif input:match("^clean enemylist$") and is_sudo(msg) then
   redis:del('enemy:')
   tdcli.editMessageText(chat_id, msg.id_, nil, '*Done ...!*\n*Enemy List Has Been Removed.*', 1, 'md')
 end
---[[if input:match("^inv$") and reply_id and is_sudo(msg) then
+if input:match("^inv$") and reply_id and is_sudo(msg) then
   function inv_reply(extra, result, success)
     tdcli.addChatMember(chat_id, result.sender_user_id_, 20)
     end tdcli.getMessage(chat_id,msg.reply_to_message_id_,inv_reply,nil)
@@ -698,7 +698,7 @@ end
     tdcli.searchPublicChat(input:match("^inv @(.*)$"),inv_username)
   elseif input:match("^inv (%d+)$") and is_sudo(msg) then
     tdcli.addChatMember(chat_id, input:match("^inv @(.*)$"), 20)
-    end]]--
+    end
     if input:match("^kick$") and reply_id and is_sudo(msg) then
       tdcli.sendChatAction(msg.chat_id_,'Typing')
       function kick_reply(extra, result, success)
@@ -1211,27 +1211,27 @@ end
         io.popen("rm -rf ~/root/.telegram-cli/data/video/*")
         io.popen("rm -rf ~/root/.telegram-cli/data/voice/*")
         io.popen("rm -rf ~/root/.telegram-cli/data/profile_photo/*")
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔹🔹🔹🔹🔹🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'D', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔹🔹🔹🔹🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'Da', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔹🔹🔹🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'Dae', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔹🔹🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'Daei', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔹🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'DaeiL', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔸🔹🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'DaeiLa', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔸🔸🔹🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'DaeiLat', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔸🔸🔸🔹🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, 'DaeiLati', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔸🔸🔸🔸🔹', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, '@DaeiLati', 1, 'html')
         sleep(0.7)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, '(@DaeiLati)', 1, 'html')
         sleep(1.3)
-        tdcli.editMessageText(chat_id, msg.id_, nil, '#Done\n<b>Self</b> #Bot <b>Reloaded</b>', 1, 'html')
+        tdcli.editMessageText(chat_id, msg.id_, nil, '@RekhneSecurity\n<b>Self</b> #Bot <b>Reloaded</b>', 1, 'html')
       end
       if input:match("^addmembers$") and is_sudo(msg) then
         function add_all(extra, result)
@@ -1252,7 +1252,7 @@ end
       end
       if input:match("^help$") and is_sudo(msg) then
         local helptext = [[
-        >️ سلف بات نوشته شده برپایه TdCli :
+        >️ @rekhneSecurity :
 
         >️ روشن کردن سلف در گروه :
         •• `self on`
